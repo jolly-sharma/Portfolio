@@ -1,46 +1,52 @@
-const Contact = () => {
+import "./Contact.css";
+
+export default function Contact() {
+  const handleClick = (label: string) => {
+    window.gtag("event", "contact_click", {
+      event_category: "Contact",
+      event_label: label,
+    });
+  };
+
   return (
-    <section id="contact">
-      <div className="container" style={styles.wrapper}>
-        <h2>Let’s work together</h2>
+    <section className="contact">
+      <div className="contact-container">
+        <h2>Get In Touch</h2>
         <p>
-            Available for freelance and contract work.  
-            I typically respond within 24 hours.
+          I’m currently open to freelance opportunities and full-time roles.
+          Reach out if you have a project in mind or want to collaborate.
         </p>
 
-        <p style={styles.text}>
-          Available for freelance & contract work. Response within 24 hours.
-        </p>
+        <div className="contact-actions">
+          <a
+            href="mailto:jollykumari9168@gmail.com"
+            className="contact-btn primary"
+            onClick={() => handleClick("Email")}
+          >
+            Email Me
+          </a>
 
-        <div style={styles.links}>
-          <a href="mailto:jollykumari9168@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/jolly-sharma-a7611a147" target="_blank">LinkedIn</a>
-          {/* <a href="https://contra.com" target="_blank">Contra</a> */}
+          <a
+            href="https://www.linkedin.com/in/jolly-sharma-a7611a147"
+            target="_blank"
+            rel="noreferrer"
+            className="contact-btn secondary"
+            onClick={() => handleClick("LinkedIn")}
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/jolly-sharma"
+            target="_blank"
+            rel="noreferrer"
+            className="contact-btn secondary"
+            onClick={() => handleClick("GitHub")}
+          >
+            GitHub
+          </a>
         </div>
       </div>
     </section>
   );
-};
-
-const styles = {
-  wrapper: {
-    textAlign: "center" as const,
-  },
-  heading: {
-    fontSize: "34px",
-    marginBottom: "12px",
-  },
-  text: {
-    color: "#94a3b8",
-    marginBottom: "24px",
-  },
-  links: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "32px",
-    fontWeight: 600,
-    color: "#6366f1",
-  },
-};
-
-export default Contact;
+}

@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+.about {
+  background-color: #020617;
+  color: #ffffff;
+  padding: 96px 24px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #cbd5f5;
+  margin-bottom: 24px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.skills span {
+  background-color: #111827;
+  border: 1px solid #1f2937;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #e5e7eb;
+}
